@@ -1,0 +1,30 @@
+variables:
+  APP_NAME: licportal2
+##每次更新都需要更改
+  APP_VERSION: 1.0.31
+  QQ_IMAGE: ccr.ccs.tencentyun.com/lucky/${APP_NAME}:${APP_VERSION}
+  QQ_IMAGE_LATEST: ccr.ccs.tencentyun.com/lucky/${APP_NAME}:latest
+
+before_script:
+  ## echo info
+  - whoami
+  - hostname
+  # - docker login -u $ALI_USERNAME registry.cn-hangzhou.aliyuncs.com -p $ALI_PASSWORD
+  - docker login -u $QCLOUD_USERNAME -p $QCLOUD_PASSWORD ccr.ccs.tencentyun.com
+
+
+build_licportal:
+  stage: build
+  script:
+  ## echo info
+  - echo $PWD
+  - echo ${APP_IMAGE}
+
+  - docker build -t ${QQ_IMAGE} .
+  - docker tag ${QQ_IMAGE} ${QQ_IMAGE_LATEST}
+
+  - docker push ${QQ_IMAGE}  
+  - docker push ${QQ_IMAGE_LATEST}
+
+  - docker rmi ${QQ_IMAGE}
+  - docker rmi ${QQ_IMAGE_LATEST}

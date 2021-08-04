@@ -1,0 +1,97 @@
+.wrap {
+    background-color:#fff; 
+    width: 100%;
+    height: auto;
+  }
+  
+  .con {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    padding-top: 25px;
+  }
+  
+  .title h2 {
+    font-size: 28px;
+  }
+  
+  .title h2 span {
+    color: #CC3333;
+  }
+  
+  .pagesNav {
+    display: flex;
+    color: #585858;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  .pagesNav a {
+    color: #585858;
+    padding: 0 10px;
+  }
+  
+  .titleRight {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  
+  .pagesNavRight {
+    display: flex;
+    color: #009999;
+    font-size: 18px;
+    font-weight: 530;
+  }
+  
+  .pagesNavRight span {
+    padding: 0 10px;
+  }
+  
+  .titleLeft {
+    display: flex;
+    text-align: right;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .titleLeft ul {
+    display: flex;
+    text-align: right;
+    justify-content: flex-start;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 530;
+  }
+  /* 活动 */
+  .activity {
+    border: #b2b2b2 1px solid;
+    padding: 8px 15px;
+    margin: 5px 0;
+    background-color: #F8F8FF;
+    align-items: center;
+    color: #000000;
+    font-weight: 530;
+  }
+  .activityName {
+    padding: 15px 0;
+  }
+  .activityMessage p {
+    margin-bottom: 7px;
+  }
+  .activityState {
+    margin: 10px 3px;
+    float: right;
+  }
+  
+  /* 添加测验 */
+  .time {
+    width: 60%;
+    margin-right: 5%;
+  }

@@ -1,0 +1,78 @@
+.wrap{
+    background-color:#fff; 
+    width: 100%;
+    height: auto;
+  }
+  .con {
+    width: 80%;
+    margin: 0 auto;
+    /* color: #006699; */
+    /* font-weight: 600; */
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    padding-top: 25px;
+  }
+  
+  .title h2,
+  .el-breadcrumb__inner,
+  .el-breadcrumb__separator {
+    font-size: 28px;
+  }
+  
+  .title h2 span {
+    color: #CC3333;
+  }
+  
+  .pagesNav {
+    display: flex;
+    color: #585858;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  .pagesNav a {
+    color: #585858;
+    padding: 0 10px;
+  }
+  
+  /* 面包屑 */
+  .breadCrumbNav,
+  .optionsBar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 18px;
+  }
+  
+  .el-breadcrumb,
+  .el-breadcrumb__item {
+    display: flex;
+    align-content: center;
+    line-height: 40px;
+  }
+  
+  .optionsBarCon {
+    display: flex;
+  }
+  
+  .optionsBarCon div {
+    margin-right: 10px;
+  }
+/*   
+  .optionsBarCon input,
+  .el-input {
+    width: 170px;
+    margin-left: 5px;
+  } */
+  
+  /* 分页 */
+  .el-pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }

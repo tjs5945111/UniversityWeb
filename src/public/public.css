@@ -1,0 +1,42 @@
+.wrap{
+    background-color:#fff; 
+    width: 100%;
+    height: auto;
+}
+.con {
+    width: 80%;
+    margin: 0 auto;
+    /* color: #006699; */
+    /* font-weight: 600; */
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    padding-top: 25px;
+}
+
+.title h2 {
+    font-size: 28px;
+}
+
+.title h2 span {
+    color: #CC3333;
+}
+
+.pagesNav {
+    display: flex;
+    color: #585858;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.pagesNav a {
+    color: #585858;
+    padding: 0 10px;
+}
+ .activity {
+    background: #F8F8FF;
+  }
