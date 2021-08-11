@@ -377,12 +377,13 @@ export default {
   font-size: 20px;
   font-weight: 700;
   line-height: 65px;
-  color: #a4a8a8;
+  /* color: #a4a8a8; */
+  margin-bottom: 1em;
 }
 
 .el-input {
   width: 100%;
-  margin: 0 0 20px 0 !important;
+  margin: 0 0 3em 0 !important;
 }
 
 /* 密码登录 */

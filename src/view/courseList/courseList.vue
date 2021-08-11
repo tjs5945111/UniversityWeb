@@ -2,7 +2,7 @@
   <!-- 课程列表页面 -->
   <div class="wrap">
     <!-- 头部 -->
-    <!-- <el-head></el-head> -->
+    <el-head></el-head>
     <div class="con">
       <div class="left">
         <div class="leftTop">
@@ -20,10 +20,25 @@
             @close="handleClose"
             @select="handleSelect"
           >
-            <el-menu-item index="我的课程">
+            <!-- <el-menu-item index="我的课程">
               <i class="el-icon-document"></i>
               <span slot="title">我的课程</span>
-            </el-menu-item>
+            </el-menu-item> -->
+            <el-submenu index="1">
+              <template slot="title">
+                <i class="el-icon-document"></i>
+                <span>我的课程</span>
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="课程">课程</el-menu-item>
+                <el-menu-item index="作业">作业</el-menu-item>        
+              </el-menu-item-group>
+              <el-menu-item-group title="资料">
+                <el-menu-item index="题库">题库</el-menu-item>
+                <el-menu-item index="作业库">作业库</el-menu-item>
+                <el-menu-item index="试卷库">试卷库</el-menu-item>
+              </el-menu-item-group>
+            </el-submenu>
             <el-menu-item index="班级管理">
               <i class="el-icon-menu"></i>
               <span slot="title">班级管理</span>
@@ -52,7 +67,6 @@
             placeholder="请输入内容"
             suffix-icon="el-icon-search"
             v-model="input1"
-            size="mini"
           >
           </el-input>
           <div @click="addCourseiPorp" style="display: flex; alignItem: center">
@@ -70,7 +84,11 @@
 
         <!-- 列表 -->
         <ul class="courseList clearfix">
-          <li v-for="(item, index) in list" :key="index" v-if="title ==='我的课程'">
+          <li
+            v-for="(item, index) in list"
+            :key="index"
+            v-if="title === '我的课程'"
+          >
             <!-- 删除 -->
             <img class="del" src="" alt="" @click="delItem(index)" />
             <!--  -->
@@ -141,7 +159,7 @@ export default {
       userNum: "",
       myImage: "",
       input1: "",
-      title:'我的课程',
+      title: "我的课程",
       list: [
         {
           img:
@@ -166,7 +184,7 @@ export default {
   },
   methods: {
     handleSelect(key, keyPath) {
-      this.title=key
+      this.title = key;
       console.log(key, keyPath);
     },
     handleOpen(key, keyPath) {
@@ -401,6 +419,9 @@ h1 {
   border-radius: 9px;
   box-shadow: 10px 10px 5px #cdcdc1;
 }
+.el-submenu .el-menu-item{
+  font-size: 18px;
+}
 
 .courseList li p {
   text-align: center;
@@ -419,7 +440,16 @@ h1 {
 .avatar-uploader .el-upload:hover {
   border-color: #409eff;
 }
-
+/* .el-menu-item:hover, */
+.el-menu-item:focus {
+  background: #e5f6ff !important;
+  border-right: 2px solid #409eff;
+}
+/* .el-submenu >div:hover,
+.el-submenu >div:focus {
+  background: #e5f6ff !important;
+  border-right: 2px solid #409eff;
+} */
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;

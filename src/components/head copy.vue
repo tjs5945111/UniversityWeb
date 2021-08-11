@@ -1,12 +1,46 @@
-<!--
- * @Author: tongjsh
- * @Date: 2020-07-07 21:13:10
- * @LastEditors: tongjsh
- * @LastEditTime: 2021-08-11 13:48:50
- * @Description: 
--->
 <template>
-  
+  <!-- 头部 -->
+  <div class="head">
+    <!-- 导航栏 -->
+    <div class="nav">
+      <h1 class="name">学在西渐</h1>
+      <el-row type="flex" class="row-bg" justify="end">
+        <!-- 头像 -->
+		<router-link
+              :to="{path: '/courseList', query: { userNum: userNum,teacherName: teacherName ,session_id: session_id ,myImage:myImage,classId:classId}}"
+               ><span class="nav-nickName">主页</span></router-link>
+
+		<div class="block">
+          <el-avatar :size="40" :src="circleUrl"></el-avatar>
+        </div>
+		
+        <!-- 昵称 -->
+        <div class="nav-nickName">{{ teacherName }}</div>
+        <!-- 更多 -->
+        <el-dropdown>
+          <div class="nav-more el-dropdown-link"></div>
+          <el-dropdown-menu slot="dropdown">
+            <!-- <el-dropdown-item><router-link to="/setting">个人设置</router-link></el-dropdown-item> -->
+            <el-dropdown-item>
+              <router-link
+                :to="{path: '/courseList', query: { userNum: userNum,teacherName: teacherName ,session_id: session_id ,myImage:myImage,classId:classId}}"
+              >课程菜单</router-link>
+            </el-dropdown-item>
+            <el-dropdown-item>
+              <router-link
+                :to="{path: '/setting', query: { userNum: userNum,teacherName: teacherName ,session_id: session_id ,myImage:myImage,classId:classId}}"
+              >个人设置</router-link>
+            </el-dropdown-item>
+            <el-dropdown-item>
+              <router-link
+                :to="{path: '/login'}">退出登录</router-link>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+		
+      </el-row>
+    </div>
+  </div>
 </template>
 
 <script>
